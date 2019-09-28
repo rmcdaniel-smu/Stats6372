@@ -11,3 +11,10 @@ timeS=ts(df, frequency = 365.25, start = 2011)
 summary(timeS)
 view(timeS)
 plot.ts(timeS)
+
+
+
+
+RMdf = RMdf %>%
+  separate(timestamp, sep="-", into = c("year", "month", "day"))
+view(RMdf)
