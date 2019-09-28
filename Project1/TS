@@ -1,0 +1,13 @@
+#format dates:
+modelingData = modelingData %>% mutate(timestamp = as.Date(timestamp, origin="1899-12-30"))
+tryFormats = c("%Y-%m-%d", "%Y/%m/%d")
+
+#read in "modelingData" dataset
+url <- getURL("https://raw.githubusercontent.com/rmcdaniel-smu/Stats6372/master/Project1/modelingData.csv")
+df <- read.csv(text = url, header = T, sep = ",", strip.white = T)
+
+df = df %>% mutate(timestamp = as.Date(timestamp, origin="1899-12-30"))
+timeS=ts(df, frequency = 365.25, start = 2011)
+summary(timeS)
+view(timeS)
+plot.ts(timeS)
