@@ -330,6 +330,19 @@ kable(data.frame("Akaikes Information Criterion: Stepwise Regression" = step.glm
 ###################################################################################
 OddsRatio
 
+title: 'Will Kobe Bryant Make His Next Shot:  Linear Discriminant Analysis and Logistic Regression using R'
+author:
+- Paul Adams
+- Reannan McDaniel
+- Jeff Nguyen
+- Southern Methodist University
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+df_print: paged
+
 library(pacman)
 library(tidyverse)
 library(skimr)
